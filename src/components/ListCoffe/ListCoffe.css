@@ -1,0 +1,10 @@
+li {
+    text-align: center;
+    background-color: #F8F8F8;
+    cursor: pointer;
+    text-wrap: nowrap;
+    width: 120px;
+    padding: 10px 30px;
+    border: 1px solid #F8F8F8;
+    border-radius: 12px;
+}

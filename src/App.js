@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { dataCoffe } from './Data/DataCoffeJson.js';
+import { Container } from './components/Container/Container.js'
+import { ListCoffe } from './components/ListCoffe/ListCoffe.js';
+import { CardPrepareCoffe } from './components/CardPrepareCoffe/CardPrepareCoffe'
 
 function App() {
+  const [state, setState] = React.useState(dataCoffe)
+
+  const CoffeDataName = state.map(e => {
+    return e.name
+  })
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+    <Container className='Container'>
+      <ListCoffe CoffeName={CoffeDataName}/>
+    </Container>
+    <CardPrepareCoffe className='CardPrepareCoffe'/>
+   </>
   );
 }
 

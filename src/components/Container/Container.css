@@ -1,0 +1,18 @@
+div {
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+
+    place-content: center;
+    width: 100vw;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,1fr);
+    list-style-type: none;
+    color: #66B1F6;
+    height: 100%;
+    gap: 20px;
+}
