@@ -1,9 +1,12 @@
 li {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #F8F8F8;
     cursor: pointer;
     text-wrap: nowrap;
-    width: 120px;
+    width: 112px;
+    height: 30px;
     padding: 10px 30px;
     border: 1px solid #F8F8F8;
     border-radius: 12px;

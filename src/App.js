@@ -14,10 +14,12 @@ function App() {
     
   return (
    <>
-    <Container className='Container'>
-      <ListCoffe CoffeName={CoffeDataName}/>
-    </Container>
-    <CardPrepareCoffe className='CardPrepareCoffe'/>
+    <main>
+      <Container className='Container'>
+        <ListCoffe CoffeName={CoffeDataName}/>
+      </Container>
+      <CardPrepareCoffe className='CardPrepareCoffe'/>
+    </main>
    </>
   );
 }

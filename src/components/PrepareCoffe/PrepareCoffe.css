@@ -1,0 +1,91 @@
+.PrepareCoffe {
+    width: 85%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    grid-template-rows: repeat(2,80px);
+    place-content: center;
+    row-gap: 20px;
+    margin: -30px;
+    object-fit: contain;
+}
+
+.PrepareCoffeDivButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 182px;
+    color: #66B1F6;
+}
+
+
+.PrepareCoffeButtons {
+    display: flex;
+    flex-direction: row;
+    width: 182px;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Count {
+    width: 100px;
+    background-color: #D9D9D9;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Rest {
+    background-color: #66B1F6;
+    width: 37px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px 0 0 12px;
+    color: #F8F8F8;
+    cursor: pointer;
+} 
+
+.Plus {
+    width: 37px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 12px 12px 0px;
+    background-color: #66B1F6;
+    color: #F8F8F8;
+    cursor: pointer;
+}
+
+.PrepareCoffeButtonsCup {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Cups {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    color: #66B1F6;
+    margin-left: 6px;
+}
+
+.CountCup {
+    width: 175px;
+    background-color: #D9D9D9;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

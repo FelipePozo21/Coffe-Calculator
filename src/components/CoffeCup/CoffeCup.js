@@ -5,6 +5,7 @@ function CoffeCup() {
     return (
         <div>
             <CoffeSVG />
+            <p>EXPRESSO</p>
         </div>
     )
 }

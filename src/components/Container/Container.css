@@ -1,18 +1,14 @@
 div {
-    display: grid;
-
-    grid-template-columns: 50% 50%;
-
     place-content: center;
-    width: 100vw;
 }
 
 ul {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(6,1fr);
+    grid-template-columns: repeat(3,172px);
     list-style-type: none;
+    align-items: center;
     color: #66B1F6;
-    height: 100%;
+    margin-top: 28px;
+    height: 435px;
     gap: 20px;
 }

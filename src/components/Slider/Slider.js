@@ -1,6 +1,12 @@
 function Slider() {
     return (
-        <div>p</div>
+        <div>
+            <span>weak</span>
+            <div>
+                <input type="range"/>
+            </div>
+            <span>strong</span>
+        </div>
     )
 }
 
