@@ -1,9 +1,11 @@
+import './Slider.css'
+
 function Slider() {
     return (
-        <div>
+        <div className='DivSliderContainer'>
             <span>weak</span>
-            <div>
-                <input type="range"/>
+            <div className="SliderDiv">
+                <div className='SliderItem'></div>
             </div>
             <span>strong</span>
         </div>

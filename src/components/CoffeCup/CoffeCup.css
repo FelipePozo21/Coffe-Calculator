@@ -1,0 +1,19 @@
+.divCoffeSVG {
+    margin-top: 24px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color: #66B1F6;
+}
+
+.CoffeSVG {
+    margin-top: 14px;
+}
+
+.CoffeSVGP {
+    margin-right: 10px;
+    margin-top: 2px;
+    font-size: 24px;
+}

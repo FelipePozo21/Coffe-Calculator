@@ -1,9 +1,21 @@
 import "./ListCoffe.css"
+import { useContext } from "react"
+import { userContext } from "../../App"
 
-function ListCoffe({CoffeName}) {
+function ListCoffe() {
+  
+  const {
+    CoffeDataName,
+    ChangeColor
+  } = useContext(userContext)
+
     return (
-       CoffeName.map(e => (
-         <li key={e}>{e}</li>
+      CoffeDataName.map(e => (
+        <li 
+          className={e.completed ? "liTrue" : "liFalse"}
+          onClick={() => {
+          ChangeColor(e)
+        }} key={e.name}>{e.name}</li>
        ))
     )
 }

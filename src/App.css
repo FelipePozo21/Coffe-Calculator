@@ -1,5 +1,7 @@
 * {
   font-family: "Inter", sans-serif;
+  font-size: 18px;
+  user-select: none;
 }
 
 main {
