@@ -9,31 +9,48 @@ export const userContext = React.createContext()
 
 function App() {
   const [state, setState] = React.useState(dataCoffe)
-  const [newName, setNewName] = React.useState('espresso')
-  const [coffeGr, setCoffeGr] = React.useState(0)
-  const [waterMl, setWaterMl] = React.useState(0)
-  const [cups, setCups] = React.useState(0)
+  const [newName, setNewName] = React.useState(dataCoffe[0])
+  const [coffeGr, setCoffeGr] = React.useState(130)
+  const [waterMl, setWaterMl] = React.useState(200)
+  const [cups, setCups] = React.useState(1)
+  const [slider, setSlider] = React.useState(10)
 
   const ChangeColor = (e) => {
     let newState = [...state]
-    newState.forEach(e => e.completed = false)
+    newState.forEach(e => e.select = false)
     let index = newState.findIndex(name => name.name === e.name)
-    newState[index].completed = true
+    newState[index].select = true
     setState(newState)
-    setNewName(newState[index].name)
+    setNewName(newState[index])
+    calcCoffe(newState[index])
   }
 
-  const CoffeDataName = state.map(e => {
-    return e
+  const CoffeDataName = state.map(nameCoffe => {
+    return nameCoffe
   })
     
-  const increment = (value, setValue) => {
-    setValue(value + 1)
+  const increment = (value, setValue, number) => {
+    setValue(value + number)
   }
 
-  const decrement = (value, setValue) => {
-    setValue(value - 1)
+  const decrement = (value, setValue, number) => {
+    let calc = value - number
+    if (calc > 0) setValue(calc)
+    else setValue(0)
   }
+
+  const calcCoffe = (coffe) => {
+    const strength = coffeGr / waterMl * coffe.strengthDeterminant
+    const strengthCups = cups !== 0 ? strength / cups : 0.2
+
+    console.log(strengthCups)
+
+    let strengthTotal = parseInt((strengthCups.toFixed(1)) * 10)
+    let sliderStrength = 100 / strengthTotal
+    console.log(strength)
+
+    setSlider(sliderStrength)
+  } 
 
   return (
    <>
@@ -48,7 +65,9 @@ function App() {
       cups,
       setCups,
       increment,
-      decrement
+      decrement,
+      slider,
+      calcCoffe
     }}>
       <main>
         <Container className='Container'>

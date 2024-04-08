@@ -12,7 +12,7 @@ function ListCoffe() {
     return (
       CoffeDataName.map(e => (
         <li 
-          className={e.completed ? "liTrue" : "liFalse"}
+          className={e.select ? "liTrue" : "liFalse"}
           onClick={() => {
           ChangeColor(e)
         }} key={e.name}>{e.name}</li>

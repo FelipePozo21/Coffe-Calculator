@@ -8,7 +8,7 @@
 .SliderDiv {
     background-color: #D9D9D9;
     width: 60%;
-    height: 21px;
+    height: 20px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 12px;
@@ -19,9 +19,12 @@
 }
 
 .SliderItem {
+    position: absolute;
+    top: 4.5px;
+    left: 0;
     margin-left: 8px;
     margin-right: 8px;
-    width: 100%;
+    width: 20%;
     height: 11px;
     background-color: #66B1F6;
     border-radius: 12px;

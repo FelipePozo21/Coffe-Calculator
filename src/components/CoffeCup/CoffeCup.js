@@ -4,12 +4,11 @@ import { useContext } from 'react'
 import { userContext } from '../../App'
 
 function CoffeCup() {
-    const coffeName = useContext(userContext)
-
+    const {newName} = useContext(userContext)
     return (
         <div className='divCoffeSVG'>
             <CoffeSVG className='CoffeSVG'/>
-            <p className='CoffeSVGP'>{coffeName.newName}</p>
+            <p className='CoffeSVGP'>{newName.name}</p>
         </div>
     )
 }
