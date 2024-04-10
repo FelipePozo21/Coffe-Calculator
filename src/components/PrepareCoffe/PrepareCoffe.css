@@ -1,91 +1,105 @@
 .PrepareCoffe {
-    width: 85%;
+    width: 100%;
     height: 100%;
     display: grid;
     margin-top: 36px;
-    grid-template-columns: repeat(2,200px);
-    grid-template-rows: repeat(2,80px);
+    grid-template-columns: repeat(3,140px);
     place-content: center;
-    row-gap: 20px;
-    object-fit: contain;
 }
 
-.PrepareCoffeDivButtons {
+.PrepareCoffeRatioContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 182px;
+    width: 100%;
+    align-items: center;
     color: #66B1F6;
+    height: 100%;
 }
-
-
-.PrepareCoffeButtons {
+.PrepareCoffeRatioName {
+    font-size: 24px;
+    margin-bottom: -12px;
+}
+.PrepareCoffeRatio {
+    border-radius: 12px;
     display: flex;
-    flex-direction: row;
-    width: 182px;
-    height: 42px;
     justify-content: center;
     align-items: center;
-}
-
-.Count {
-    width: 100px;
+    font-size: 32px;
+    width: 130px;
+    height: 80px;
     background-color: #D9D9D9;
-    height: 42px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
-
-.Rest {
-    background-color: #66B1F6;
-    width: 37px;
-    height: 42px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px 0 0 12px;
-    color: #F8F8F8;
-    cursor: pointer;
+ 
+.PrepareCoffeRatio input {
+    border: none;
+    background-color: transparent;
+    width: 65px;
+    height: 39px;
+    color: #66B1F6;
+    font-size: 32px;
+    text-align: center;    
 } 
 
-.Plus {
-    width: 37px;
-    height: 42px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0px 12px 12px 0px;
+.SpanRatio {
+    width: 2px;
+    position: absolute;
+    height: 80px;
     background-color: #66B1F6;
-    color: #F8F8F8;
-    cursor: pointer;
+    left: 50%;
 }
-
-.PrepareCoffeButtonsCup {
+.RattioMl {
     display: flex;
-    flex-direction: row;
-    width: 250px;
-    height: 42px;
     justify-content: center;
-    align-items: center;
+    width: 65px;
 }
 
-.Cups {
-    grid-column: 1 / span 2;
+.PrepareCoffeGrContainer {
     display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 30px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     color: #66B1F6;
-    margin-left: 6px;
-}
-
-.CountCup {
-    width: 175px;
-    background-color: #D9D9D9;
-    height: 42px;
-    display: flex;
-    justify-content: center;
     align-items: center;
+}
+.PrepareCoffeGrName {
+    font-size: 24px;
+    margin-bottom: -12px;
+}
+.PrepareCoffeGr {
+    width: 130px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #D9D9D9;
+    border-radius: 12px;
+}
+.PrepareCoffeGrP {
+    font-size: 32px;
+    margin: 0;
+}
+.PrepareCoffeMlContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: #66B1F6;
+    align-items: center;
+}
+.PrepareCoffeMlName {
+    font-size: 24px;
+    margin-bottom: -12px;
+}
+.PrepareCoffeMl {
+    width: 130px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #D9D9D9;
+    border-radius: 12px;
+}
+.PrepareCoffeMlP {
+    font-size: 32px;
+    margin: 0;
 }

@@ -10,11 +10,9 @@ export const userContext = React.createContext()
 function App() {
   const [state, setState] = React.useState(dataCoffe)
   const [newName, setNewName] = React.useState(dataCoffe[0])
-  const [coffeGr, setCoffeGr] = React.useState(130)
-  const [waterMl, setWaterMl] = React.useState(200)
-  const [cups, setCups] = React.useState(1)
-  const [slider, setSlider] = React.useState(10)
-
+  const [slider, setSlider] = React.useState(20)
+  const [ratioCoffe, setRatioCoffe] = React.useState(1)
+   
   const ChangeColor = (e) => {
     let newState = [...state]
     newState.forEach(e => e.select = false)
@@ -22,35 +20,13 @@ function App() {
     newState[index].select = true
     setState(newState)
     setNewName(newState[index])
-    calcCoffe(newState[index])
+
   }
 
   const CoffeDataName = state.map(nameCoffe => {
     return nameCoffe
   })
-    
-  const increment = (value, setValue, number) => {
-    setValue(value + number)
-  }
 
-  const decrement = (value, setValue, number) => {
-    let calc = value - number
-    if (calc > 0) setValue(calc)
-    else setValue(0)
-  }
-
-  const calcCoffe = (coffe) => {
-    const strength = coffeGr / waterMl * coffe.strengthDeterminant
-    const strengthCups = cups !== 0 ? strength / cups : 0.2
-
-    console.log(strengthCups)
-
-    let strengthTotal = parseInt((strengthCups.toFixed(1)) * 10)
-    let sliderStrength = 100 / strengthTotal
-    console.log(strength)
-
-    setSlider(sliderStrength)
-  } 
 
   return (
    <>
@@ -58,16 +34,9 @@ function App() {
       newName,
       ChangeColor,
       CoffeDataName,
-      coffeGr,
-      setCoffeGr,
-      waterMl,
-      setWaterMl,
-      cups,
-      setCups,
-      increment,
-      decrement,
       slider,
-      calcCoffe
+      ratioCoffe, 
+      setRatioCoffe
     }}>
       <main>
         <Container className='Container'>

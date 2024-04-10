@@ -1,14 +1,14 @@
 import './PrepareCoffe.css'
-import { PrepareCoffeGr } from './PrepareCoffeComponets/CoffeGr/PrepareCoffeGr'
-import { PrepareCoffeMl } from './PrepareCoffeComponets/WaterMl/PrepareCoffeMl'
-import { PrepareCoffeCups } from './PrepareCoffeComponets/CoffeCup/PrepareCoffeCups'
+import { PrepareCoffeRatio } from './PrepareCoffeComponets/CoffeRatio/PrepareCoffeRatio'
+import { PrepareCoffeMl } from './PrepareCoffeComponets/CoffeMl/PrepareCoffeMl'
+import { PrepareCoffeGr } from './PrepareCoffeComponets/CoffeGr/./PrepareCoffeGr'
 
 function PrepareCoffe() {
     return (
         <div className='PrepareCoffe'>
-            <PrepareCoffeGr />
+            <PrepareCoffeRatio />
             <PrepareCoffeMl />
-            <PrepareCoffeCups />
+            <PrepareCoffeGr />
         </div>
     )
 }
