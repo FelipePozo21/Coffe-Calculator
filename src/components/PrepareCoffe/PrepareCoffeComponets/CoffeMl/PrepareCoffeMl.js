@@ -3,7 +3,9 @@ import { useContext } from "react";
 import { userContext } from "../../../../App";
 
 function PrepareCoffeMl() {
-
+const {
+    water
+} = useContext(userContext)
 
     return (
         <div className="PrepareCoffeMlContainer">
@@ -11,7 +13,7 @@ function PrepareCoffeMl() {
                 <p>ml</p>
             </div>
             <div className="PrepareCoffeMl">
-                <p className="PrepareCoffeMlP">12</p>
+                <p className="PrepareCoffeMlP">{water}</p>
             </div>
         </div>
     )

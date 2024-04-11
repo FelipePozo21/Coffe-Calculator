@@ -5,11 +5,17 @@ import { userContext } from "../../../../App"
 function PrepareCoffeRatio() {
     const {
         ratioCoffe,
-        setRatioCoffe
+        setRatioCoffe,
+        ratioWater,
+        setRatioWater
     } = useContext(userContext)
 
-    const increment = () => {
-        
+    const coffeRatio = (e) => {
+        setRatioCoffe(e.target.value)
+    }
+
+    const waterRatio = (e) => {
+        setRatioWater (e.target.value)
     }
 
     return (
@@ -18,9 +24,9 @@ function PrepareCoffeRatio() {
             <p>ratio</p>
         </div>
         <div className="PrepareCoffeRatio">
-            <input type="submit" value={ratioCoffe} onChange={increment}>2</input>
+            <input maxLength='2' type="text" value={ratioCoffe} onChange={coffeRatio}></input>
             <span className="SpanRatio"></span>
-            <p className="RattioMl">12</p>
+            <input maxLength='2' type="text" value={ratioWater} onChange={waterRatio}></input>
         </div>
     </div>
     )

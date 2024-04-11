@@ -4,21 +4,23 @@ import { userContext } from "../../../../App";
 
 function PrepareCoffeGr() {
     const {
-        waterMl,
-        setWaterMl,
-        increment,
-        decrement,
-        newName,
-        calcCoffe
+        coffeeGr,
+        setCoffeeGr,
+        ratioWater,
+        setWater,
     } = useContext(userContext)
     
+    const coffeRatio = (e) => {
+        setCoffeeGr(e.target.value)
+}
+
     return (
         <div className="PrepareCoffeGrContainer">
             <div className="PrepareCoffeGrName">
                 <p>gramos</p>
             </div>
             <div className="PrepareCoffeGr">
-                <p className="PrepareCoffeGrP">12</p>
+                <input className="PrepareCoffeGrP" maxLength='3' type="text" value={coffeeGr} onChange={coffeRatio}></input>
             </div>
         </div>
     )

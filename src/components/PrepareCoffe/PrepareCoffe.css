@@ -42,6 +42,10 @@
     text-align: center;    
 } 
 
+.PrepareCoffeRatio input:focus {
+    outline: none;
+}
+
 .SpanRatio {
     width: 2px;
     position: absolute;
@@ -75,10 +79,20 @@
     background-color: #D9D9D9;
     border-radius: 12px;
 }
-.PrepareCoffeGrP {
+.PrepareCoffeGr input {
+    width: 65px;
+    background-color: transparent;
+    border: none;
+    color: #66B1F6;
+    text-align: center;
     font-size: 32px;
     margin: 0;
 }
+
+.PrepareCoffeGr input:focus {
+    outline: none;
+}
+
 .PrepareCoffeMlContainer {
     display: flex;
     flex-direction: column;
