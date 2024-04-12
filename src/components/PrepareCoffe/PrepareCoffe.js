@@ -7,8 +7,8 @@ function PrepareCoffe() {
     return (
         <div className='PrepareCoffe'>
             <PrepareCoffeRatio />
-            <PrepareCoffeMl />
             <PrepareCoffeGr />
+            <PrepareCoffeMl />
         </div>
     )
 }

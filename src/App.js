@@ -34,6 +34,24 @@ function App() {
     } else if(ratioCoffe === ratioWater) {
       setWater(ratioCoffe)
     }
+
+    let strong = (ratioCoffe / ratioWater)
+
+    if(strong === 1) {
+      setSlider(100)
+    } else if(strong === 0.5) {
+      setSlider(80)
+    } else if(Number(strong.toFixed(2)) === 0.33 ) {
+      setSlider(60)
+    } else if(strong === 0.25) {
+      setSlider(40)
+    } else if(strong === 0.2) {
+      setSlider(20)
+    } else if(strong < 0.2) {
+      setSlider(20)
+    } 
+
+
   },[coffeeGr, ratioCoffe, ratioWater])
 
   useEffect(() => {
